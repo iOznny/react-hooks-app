@@ -5,6 +5,5 @@ export const HooksApp = () => {
         <div>
             <h1>Hola Mundo</h1>
         </div>
-    )
+    );
 }
-
