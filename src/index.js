@@ -4,9 +4,10 @@ import ReactDOM from 'react-dom';
 //import { HooksApp } from './HooksApp';
 // import { CounterApp } from './components/useState/CounterApp';
 // import { CounterWithCustomHook } from './components/useState/CounterWithCustomHook';
-import { SimpleForm } from './components/useEffect/SimpleForm';
+//import { SimpleForm } from './components/useEffect/SimpleForm';
+import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook';
 
 ReactDOM.render(
-  <SimpleForm />,
+  <FormWithCustomHook />,
   document.getElementById('root')
 );
