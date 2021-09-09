@@ -7,6 +7,10 @@ export const useFetch = (url) => {
 
     // Effect object
     useEffect(() => {
+
+        // View the loading
+        setState({ data: null, loading: true, error: null });
+
         // Get Api
         fetch(url)
         .then(res => res.json())

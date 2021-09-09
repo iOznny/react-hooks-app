@@ -3,25 +3,25 @@ import { useState } from "react";
 export const useCounter = (initialState = 10) => {
 
     // Initial Object
-    const [state, setState] = useState(initialState);
+    const [counter, setCounter] = useState(initialState);
 
     // Increment initial state value
-    const increment = (factor = 1) => {
-        setState(state + factor);
+    const increment = () => {
+        setCounter(counter + 1);
     }
 
     // Reset state value
     const reset = () => {
-        setState(initialState);
+        setCounter(initialState);
     }
 
     // Decrement initial state value
-    const decrement = (factor = 1) => {
-        setState(state - factor);
+    const decrement = () => {
+        setCounter(counter - 1);
     }
 
     return {
-        state,
+        counter,
         increment,
         reset,
         decrement
