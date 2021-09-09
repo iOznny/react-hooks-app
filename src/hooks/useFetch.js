@@ -1,9 +1,19 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export const useFetch = (url) => {
     
+    // useRef
+    const isMounted = useRef(true);
+
     // Initial state object.
     const [state, setState] = useState({ data: null, loading: true, error: null});
+
+    // Change status when dismounted
+    useEffect(() => {
+        return () => {
+            isMounted.current = false;
+        }
+    }, []);
 
     // Effect object
     useEffect(() => {
@@ -15,11 +25,13 @@ export const useFetch = (url) => {
         fetch(url)
         .then(res => res.json())
         .then(data => {
-            setState({
-                loading: false,
-                error: null,
-                data
-            });
+            if (isMounted.current) {                    
+                setState({
+                    loading: false,
+                    error: null,
+                    data
+                });                
+            }
         });
     }, [url]);
 
