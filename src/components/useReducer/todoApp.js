@@ -11,7 +11,7 @@ const initialState = [{
 
 export const TodoApp = () => {
 
-    const [ todos, dispatch ] = useReducer(todoReducer, initialState);
+    const [todos, dispatch] = useReducer(todoReducer, initialState);
     console.log(todos);
 
     const handleSubmit = (e) => {
@@ -41,7 +41,7 @@ export const TodoApp = () => {
                     <ol  className="list-group">
                         {
                             todos.map((todo, i) => {
-                                <li className="list-group-item" key={ todo.id }>
+                                return <li className="list-group-item mb-2" key={ todo.id }>
                                     <p className="text-center">{ i + 1 }. { todo.desc }</p>
                                     <button className="btn btn-danger">Borrar</button>
                                 </li>
