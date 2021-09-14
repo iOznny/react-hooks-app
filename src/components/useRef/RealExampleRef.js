@@ -8,7 +8,6 @@ export const RealExampleRef = () => {
     // Show and Hide Multiple Custom Hooks
     const [show, setShow] = useState(false);
 
-
     return (
         <div>
             <h1>Real Example Ref</h1>
