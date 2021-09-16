@@ -16,11 +16,9 @@ import ReactDOM from 'react-dom';
 //import { Dad } from './components/homework-memo/Dad';
 import { TodoApp } from './components/useReducer/todoApp';
 
-
 ReactDOM.render(
   <TodoApp />,
   document.getElementById('root')
 );
-
 
 //import './components/useReducer/introReducer';
