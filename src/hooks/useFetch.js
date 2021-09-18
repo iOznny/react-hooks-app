@@ -6,7 +6,7 @@ export const useFetch = (url) => {
     const isMounted = useRef(true);
 
     // Initial state object.
-    const [state, setState] = useState({ data: null, loading: true, error: null});
+    const [ state, setState ] = useState({ data: null, loading: true, error: null});
 
     // Change status when dismounted
     useEffect(() => {
