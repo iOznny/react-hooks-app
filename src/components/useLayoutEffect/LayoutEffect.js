@@ -17,7 +17,7 @@ export const LayoutEffect = () => {
 
     // Search reference
     const pTag = useRef();
-    const [boxSize, setBoxSize] = useState({});
+    const [ boxSize, setBoxSize ] = useState({});
     
     // Get bounding client rect 
     useLayoutEffect(() => {
