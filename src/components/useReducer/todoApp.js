@@ -1,25 +1,35 @@
 import React, { useReducer } from 'react';
 import { todoReducer } from './todoReducer';
+import { useForm } from '../../hooks/useForm';
 
 import './styles.css';
 
-const initialState = [{
-    id: new Date().getTime(),
-    desc: 'Learn React',
-    done: false
-}];
+const init = () => {
+    return [{
+        id: new Date().getTime(),
+        desc: 'Learn React',
+        done: false
+    }];
+}
 
 export const TodoApp = () => {
 
-    const [todos, dispatch] = useReducer(todoReducer, initialState);
-    console.log(todos);
+    const [todos, dispatch] = useReducer(todoReducer, [], init);
+
+    const [{ desc }, handleInputChange, reset] = useForm({
+        desc: ''
+    });
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        if (desc.trim().length <= 1) {
+            return;
+        }
+
         const newTodo = {
             id: new Date().getTime(),
-            desc: 'New homework',
+            desc: desc,
             done: false
         };
 
@@ -29,6 +39,7 @@ export const TodoApp = () => {
         };
 
         dispatch(action);
+        reset();
     }
 
     return (
@@ -41,7 +52,7 @@ export const TodoApp = () => {
                     <ol  className="list-group">
                         {
                             todos.map((todo, i) => {
-                                return <li className="list-group-item mb-2" key={ todo.id }>
+                                return <li className="list-group-item" key={ todo.id }>
                                     <p className="text-center">{ i + 1 }. { todo.desc }</p>
                                     <button className="btn btn-danger">Borrar</button>
                                 </li>
@@ -55,7 +66,7 @@ export const TodoApp = () => {
                     <hr/>
 
                     <form onSubmit={ handleSubmit }>
-                        <input type="text" className="form-control" name="desc" placeholder="Aprender..." autoComplete="off" />
+                        <input type="text" className="form-control" name="desc" placeholder="Aprender..." autoComplete="off" value={ desc } onChange={ handleInputChange } />
                         <div className="d-grid gap-2">
                             <button type="submit" className="btn btn-outline-primary btn-block mt-1">Agregar</button>
                         </div>

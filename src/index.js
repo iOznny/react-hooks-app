@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 //import { MemoHook } from './components/memos/MemoHook';
 //import { CallbackHook } from './components/memos/CallbackHook';
 //import { Dad } from './components/homework-memo/Dad';
-import { TodoApp } from './components/useReducer/todoApp';
+import { TodoApp } from './components/useReducer/TodoApp';
 
 ReactDOM.render(
   <TodoApp />,
