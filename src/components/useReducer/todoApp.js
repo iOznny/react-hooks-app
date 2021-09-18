@@ -25,7 +25,28 @@ export const TodoApp = () => {
     // Save localstorage todos
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
-    }, [todos])
+    }, [todos]);
+
+    // handle Delete
+    const handleDelete = (todoId) => {        
+        // Action
+        const action = {
+            type: 'delete',
+            payload: todoId
+        };
+
+        // Dispatch
+        dispatch(action);
+    }
+
+    // Change toggle
+    const handleToggle = (todoId) => {
+        // Action
+        dispatch({
+            type: 'toggle',
+            payload: todoId
+        });
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -60,8 +81,8 @@ export const TodoApp = () => {
                         {
                             todos.map((todo, i) => {
                                 return <li className="list-group-item" key={ todo.id }>
-                                    <p className="text-center">{ i + 1 }. { todo.desc }</p>
-                                    <button className="btn btn-danger">Borrar</button>
+                                    <p className={ `${ todo.done && 'complete' }` } onClick={ () => handleToggle(todo.id) }>{ i + 1 }. { todo.desc }</p>
+                                    <button className="btn btn-danger" onClick={ () => handleDelete(todo.id) }>Borrar</button>
                                 </li>
                             })
                         }     
