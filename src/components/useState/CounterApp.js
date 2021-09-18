@@ -3,7 +3,7 @@ import './counter.css';
 
 export const CounterApp = () => {
 
-    const [state, setState] = useState({
+    const [ state, setState ] = useState({
         c1: 10,
         c2: 20,
     });

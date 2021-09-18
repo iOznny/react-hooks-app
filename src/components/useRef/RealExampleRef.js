@@ -6,7 +6,7 @@ import '../useEffect/effects.css';
 export const RealExampleRef = () => {
 
     // Show and Hide Multiple Custom Hooks
-    const [show, setShow] = useState(false);
+    const [ show, setShow ] = useState(false);
 
     return (
         <div>

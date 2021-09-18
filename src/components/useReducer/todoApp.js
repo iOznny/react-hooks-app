@@ -16,9 +16,9 @@ const init = () => {
 
 export const TodoApp = () => {
 
-    const [todos, dispatch] = useReducer(todoReducer, [], init);
+    const [ todos, dispatch ] = useReducer(todoReducer, [], init);
 
-    const [{ desc }, handleInputChange, reset] = useForm({
+    const [ { desc }, handleInputChange, reset ] = useForm({
         desc: ''
     });
 
