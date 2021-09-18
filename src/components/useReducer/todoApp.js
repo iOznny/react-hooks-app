@@ -5,11 +5,13 @@ import { useForm } from '../../hooks/useForm';
 import './styles.css';
 
 const init = () => {
-    return [{
-        id: new Date().getTime(),
-        desc: 'Learn React',
-        done: false
-    }];
+    // return [{
+    //     id: new Date().getTime(),
+    //     desc: 'Learn React',
+    //     done: false
+    // }];
+
+    return JSON.parse(localStorage.getItem('todos')) || [];
 }
 
 export const TodoApp = () => {
