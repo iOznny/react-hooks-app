@@ -5,7 +5,7 @@ import './effects.css';
 export const SimpleForm = () => {
 
     // Initialize form object
-    const [formState, setFormState] = useState({
+    const [ formState, setFormState ] = useState({
         name: '',
         email: ''
     });

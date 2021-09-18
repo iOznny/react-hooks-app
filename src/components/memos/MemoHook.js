@@ -8,7 +8,7 @@ export const MemoHook = () => {
 
     // Initial counter object
     const { counter, increment } = useCounter(5000);
-    const [show, setShow] = useState(true);
+    const [ show, setShow ] = useState(true);
 
     // useMemo
     const memoPH = useMemo(() => processHeavy(counter), [counter]);

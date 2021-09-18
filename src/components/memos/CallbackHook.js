@@ -5,7 +5,7 @@ import '../useEffect/effects.css';
 
 export const CallbackHook = () => {
 
-    const [counter, setCounter] = useState(10);
+    const [ counter, setCounter ] = useState(10);
 
     // const increment = () => {
     //     setCounter(counter + 1);
