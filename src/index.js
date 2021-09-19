@@ -18,8 +18,7 @@ import ReactDOM from 'react-dom';
 import { MainApp } from './components/useContext/MainApp';
 
 ReactDOM.render(
-  <MainApp />,
-  document.getElementById('root')
+  <MainApp />, document.getElementById('root')
 );
 
 //import './components/useReducer/introReducer';
