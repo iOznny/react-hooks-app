@@ -3,6 +3,7 @@ import { todoReducer } from './todoReducer';
 import { useForm } from '../../hooks/useForm';
 
 import './styles.css';
+import { TodoList } from './TodoList';
 
 const init = () => {
     // return [{
@@ -77,16 +78,7 @@ export const TodoApp = () => {
 
             <div className="row">
                 <div className="col-6">
-                    <ol  className="list-group">
-                        {
-                            todos.map((todo, i) => {
-                                return <li className="list-group-item" key={ todo.id }>
-                                    <p className={ `${ todo.done && 'complete' }` } onClick={ () => handleToggle(todo.id) }>{ i + 1 }. { todo.desc }</p>
-                                    <button className="btn btn-danger" onClick={ () => handleDelete(todo.id) }>Borrar</button>
-                                </li>
-                            })
-                        }     
-                    </ol>
+                   <TodoList todos={ todos } handleDelete={ handleDelete } handleToggle={ handleToggle } />
                 </div>
 
                 <div className="col-6">
