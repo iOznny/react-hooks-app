@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
 
 // Components
 import { Navbar } from './Navbar';
@@ -17,6 +17,9 @@ export const AppRouter = () => {
                     <Route exact path="/" component={ HomeScreen } />
                     <Route exact path="/about" component={ AboutScreen } />
                     <Route exact path="/login" component={ LoginScreen } />
+
+                    {/* <Route component={ HomeScreen } /> */}
+                    <Redirect to="/" />
                 </Switch>
             </div>
         </Router>
