@@ -3,9 +3,10 @@ import { UserContext } from './UserContext';
 
 export const AboutScreen = () => {
 
+    // UserContext
     const { user, setUser } = useContext(UserContext);
 
-
+    // Modify content of UserContext
     const handleClick = () => {
         setUser({});
     };
