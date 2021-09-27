@@ -16,7 +16,7 @@ export const CounterApp = () => {
           <h1>Counter 2 { c2 }</h1>  
           <hr />
 
-          <button className="btn btn-primary" onClick={ () => { setState({...state, c1: c1 + 1 }) }}>+1</button>
+          <button className="btn btn-primary" onClick={ () => { setState( {...state, c1: c1 + 1 } ) }}>+1</button>
         </>
     )
 }

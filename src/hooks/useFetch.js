@@ -16,7 +16,7 @@ export const useFetch = (url) => {
     }, []);
 
     // Effect object
-    useEffect(() => {
+    useEffect( () => {
 
         // View the loading
         setState({ data: null, loading: true, error: null });
