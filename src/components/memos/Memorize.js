@@ -8,7 +8,7 @@ export const Memorize = () => {
 
     // Initial counter object
     const { counter, increment } = useCounter(10);
-    const [show, setShow] = useState(true);
+    const [ show, setShow ] = useState(true);
 
     return (
         <div>
