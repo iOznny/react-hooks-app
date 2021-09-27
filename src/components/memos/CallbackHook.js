@@ -12,7 +12,7 @@ export const CallbackHook = () => {
     // }
 
     // Devolverá una versión memorizada del callback que solo cambia si una de las dependencias ha cambiado. 
-    const increment = useCallback((number) => {
+    const increment = useCallback( (number) => {
         setCounter(c => c + number);        
     }, [setCounter]);
 
