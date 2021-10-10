@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import { Child } from './Child';
 import { useState } from 'react';
-
 import '../useEffect/effects.css';
 
 export const Dad = () => {

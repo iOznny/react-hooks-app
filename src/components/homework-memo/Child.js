@@ -10,4 +10,3 @@ export const Child = React.memo( ({ number, increment }) => {
         </button>
     )
 })
- 
