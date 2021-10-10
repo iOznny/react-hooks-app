@@ -1,11 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { processHeavy } from '../../helpers/ProcessHeavy';
 import { useCounter } from '../../hooks/useCounter';
-
 import '../useEffect/effects.css';
 
 export const MemoHook = () => {
-
     // Initial counter object
     const { counter, increment } = useCounter(5000);
     const [ show, setShow ] = useState(true);

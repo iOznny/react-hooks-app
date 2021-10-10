@@ -1,11 +1,9 @@
 import React from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { useCounter } from '../../hooks/useCounter';
-
 import '../useEffect/effects.css';
 
 export const MultipleCustomHooks = () => {
-
     // Conter Quotes
     const { counter, increment } = useCounter(1);
 
