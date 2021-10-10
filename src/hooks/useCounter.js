@@ -3,7 +3,7 @@ import { useState } from "react";
 export const useCounter = (initialState = 10) => {
 
     // Initial Object
-    const [counter, setCounter] = useState(initialState);
+    const [ counter, setCounter ] = useState(initialState);
 
     // Increment initial state value
     const increment = () => {

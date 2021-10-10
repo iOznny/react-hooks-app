@@ -9,7 +9,7 @@ export const MemoHook = () => {
     const [ show, setShow ] = useState(true);
 
     // useMemo
-    const memoPH = useMemo(() => processHeavy(counter), [counter]);
+    const memoPH = useMemo( () => processHeavy(counter), [counter]);
 
     return (
         <div>
