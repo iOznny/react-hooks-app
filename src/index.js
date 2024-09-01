@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 //import { SimpleForm } from './components/useEffect/SimpleForm';
 //import { FormWithCustomHook } from './components/useEffect/FormWithCustomHook';
 //import { MultipleCustomHooks } from './components/examples/MultipleCustomHooks';
-//import { FocusScreen } from './components/useRef/FocusScreen';
+import { FocusScreen } from './components/useRef/FocusScreen';
 //import { RealExampleRef } from './components/useRef/RealExampleRef';
 //import { LayoutEffect } from './components/useLayoutEffect/LayoutEffect';
 //import { Memorize } from './components/memos/Memorize';
@@ -15,10 +15,10 @@ import ReactDOM from 'react-dom';
 //import { CallbackHook } from './components/memos/CallbackHook';
 //import { Dad } from './components/homework-memo/Dad';
 //import { TodoApp } from './components/useReducer/TodoApp';
-import { MainApp } from './components/useContext/MainApp';
+// import { MainApp } from './components/useContext/MainApp';
 
 ReactDOM.render(
-  <MainApp />, document.getElementById('root')
+  <FocusScreen />, document.getElementById('root')
 );
 
 //import './components/useReducer/introReducer';
